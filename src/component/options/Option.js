@@ -42,7 +42,7 @@ const Option = () => {
   const handleEditOption = async (indexToEdit, value) => {
     const arr = options;
     arr[indexToEdit] = value;
-    setOptions(arr);
+    setOptions([...arr]);
   };
 
   return (
@@ -58,6 +58,7 @@ const Option = () => {
         />
         <button>Submit</button>
       </form>
+
       {options.map((option, index) => (
         <AddOptions
           key={index}
