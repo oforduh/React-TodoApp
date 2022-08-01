@@ -1,0 +1,42 @@
+.optionParent {
+  border: 1px black solid;
+  display: grid;
+  place-items: center;
+  background-color: var(--white);
+
+  height: 80vh;
+  .option {
+    border: 1px black solid;
+    width: 60vw;
+    height: 70vh;
+    .header {
+      text-align: center;
+    }
+    .formParent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 150px;
+
+      .todoForm {
+        text-align: center;
+        border: 1px red solid;
+        padding: 30px 0;
+        width: 90%;
+        input {
+          border-radius: 5px;
+          padding: 10px;
+          width: 60%;
+        }
+        button {
+          margin-left: 15px;
+          padding: 10px;
+          width: 13%;
+          border-radius: 5px;
+          background-color: var(--purple);
+          color: var(--white);
+        }
+      }
+    }
+  }
+}
