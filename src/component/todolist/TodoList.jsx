@@ -58,16 +58,17 @@ const TodoList = () => {
             input={input}
           />
         </div>
-
-        {todos.map((todo, index) => (
-          <SingleTodo
-            index={index}
-            key={index}
-            todoText={todo}
-            handleDeleteTodo={handleDeleteTodo}
-            handleEditTodo={handleEditTodo}
-          />
-        ))}
+        <div className={styles.todoContainer}>
+          {todos.map((todo, index) => (
+            <SingleTodo
+              index={index}
+              key={index}
+              todoText={todo}
+              handleDeleteTodo={handleDeleteTodo}
+              handleEditTodo={handleEditTodo}
+            />
+          ))}
+        </div>
         <button onClick={handleRemoveAll}>Clear Todo App</button>
       </div>
     </div>

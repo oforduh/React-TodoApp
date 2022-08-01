@@ -1,7 +1,6 @@
 .todosParent {
   width: 100%;
   color: var(--white);
-  border: 2px solid white;
   .todos {
     width: 100%;
     .formParent {
@@ -9,6 +8,17 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    .todoContainer {
+      border: 2px solid white;
+      display: flex;
+      justify-content: space-evenly;
+      width: 95%;
+      margin: auto;
+      flex-wrap: wrap;
+      @media (max-width: 700) {
+        width: 95%;
+      }
     }
   }
 }
