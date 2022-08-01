@@ -11,6 +11,8 @@ const SingleTodo = ({ todoText, index, handleEditTodo, handleDeleteTodo }) => {
   useEffect(() => {
     inputRef.current?.focus();
   }, [edit]);
+
+  
   return (
     <div className={styles.single_todo_form}>
       {!edit ? (
@@ -45,7 +47,7 @@ const SingleTodo = ({ todoText, index, handleEditTodo, handleDeleteTodo }) => {
         </div>
       )}
       {edit && (
-        <>
+        <div className={styles.editButtonGroup}>
           <button
             onClick={() => {
               handleEditTodo(index, editInput);
@@ -61,7 +63,7 @@ const SingleTodo = ({ todoText, index, handleEditTodo, handleDeleteTodo }) => {
           >
             Cancel
           </button>
-        </>
+        </div>
       )}
     </div>
   );
