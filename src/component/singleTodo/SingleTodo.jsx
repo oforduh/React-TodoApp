@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from "react";
-import styles from "./option.module.scss";
+import React, { useState } from "react";
+import styles from "./singletodo.module.scss";
 
-const AddOptions = (props) => {
+const SingleTodo = ({todoText,index,handleEditTodo,handleDeleteTodo}) => {
   const [edit, setEdit] = useState(false);
-  const [editInput, setEditInput] = useState(props.optionText);
-  const handleDeleteOption = props.handleDeleteOption;
-  const handleEditOption = props.handleEditOption;
-  const [optionText, setOptionText] = useState(props.optionText);
-  const index = props.index;
-
-  useEffect(() => {
-    setOptionText(props.optionText);
-  }, [props]);
+  const [editInput, setEditInput] = useState(todoText);
 
   return (
-    <div className={styles.addOptions}>
+    <div className={styles.container}>
       {!edit ? (
-        <p>{optionText}</p>
+        <p>{todoText}</p>
       ) : (
         <input
           type="text"
@@ -35,7 +27,7 @@ const AddOptions = (props) => {
           </button>
           <button
             onClick={() => {
-              handleDeleteOption(index);
+              handleDeleteTodo(index);
             }}
           >
             Delete
@@ -46,7 +38,7 @@ const AddOptions = (props) => {
         <>
           <button
             onClick={() => {
-              handleEditOption(index, editInput);
+                handleEditTodo(index, editInput);
               setEdit(false);
             }}
           >
@@ -65,4 +57,4 @@ const AddOptions = (props) => {
   );
 };
 
-export default AddOptions;
+export default SingleTodo;

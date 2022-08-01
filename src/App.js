@@ -1,13 +1,13 @@
-import "./App.css";
 import Header from "./component/header/Header";
-import Option from "./component/options/Option";
+import styles from "./app.module.scss";
+import Option from "./component/todolist/TodoList";
+
 
 function App() {
-  const title = "Todo App";
   return (
-    <div className="App">
-      <Header title={title} />
-      <Option />
+    <div className={styles.app_container}>
+      <Header />
+     <Option/>
     </div>
   );
 }
