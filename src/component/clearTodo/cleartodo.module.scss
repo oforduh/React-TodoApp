@@ -1,0 +1,20 @@
+.container {
+  height: 60px;
+  width: 100%;
+  //   border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    font-family: "Square Peg", cursive;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: var(--purple);
+    background-color: var(--white);
+    font-size: 35px;
+    padding:3px 20px;
+    font-weight: bolder;
+  }
+}

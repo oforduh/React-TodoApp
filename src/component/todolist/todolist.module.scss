@@ -1,7 +1,12 @@
 .todosParent {
   width: 100%;
   color: var(--white);
+  height: 100%;
+  position: relative;
   .todos {
+    min-height: calc(100vh - 140px);
+    overflow: scroll;
+    margin-bottom: 30px;
     width: 100%;
     .formParent {
       width: 100%;
@@ -11,6 +16,8 @@
     }
     .todoContainer {
       // border: 2px solid white;
+      border: 2px solid white;
+      max-height: calc(100vh - 200px);
       display: flex;
       justify-content: space-evenly;
       width: 95%;
@@ -20,5 +27,10 @@
         width: 95%;
       }
     }
+  }
+  .clearTodoContainer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 }

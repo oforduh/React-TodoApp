@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ClearTodo from "../clearTodo/ClearTodo";
 import InputField from "../inputField/InputField";
 import SingleTodo from "../singleTodo/SingleTodo";
 import styles from "./todolist.module.scss";
@@ -69,7 +70,9 @@ const TodoList = () => {
             />
           ))}
         </div>
-        <button onClick={handleRemoveAll}>Clear Todo App</button>
+      </div>
+      <div className={styles.clearTodoContainer}>
+        <ClearTodo handleRemoveAll={handleRemoveAll} />
       </div>
     </div>
   );
