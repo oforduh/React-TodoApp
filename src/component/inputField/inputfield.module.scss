@@ -13,6 +13,9 @@
     padding: 10px 20px;
     font-family: "Square Peg", cursive;
     font-size: 30px;
+    &:focus {
+      box-shadow: 0 0 10px 5000px rgba(0, 0, 0, 0.5);
+    }
   }
   .addTodoButton {
     position: absolute;
